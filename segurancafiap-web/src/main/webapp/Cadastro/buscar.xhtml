@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<ui:composition template="modelo.xhtml">
+	<ui:define name="pageTitle">Title</ui:define>
+	<ui:define name="pageHeader">Header</ui:define>
+	<ui:define name="body">
+		<form jsfc="h:form" id="Form2">			
+			<h:panelGrid id="panelBuscas" columns="1" 	>
+				<f:facet name="header">
+					<h:outputText value="Cadastro de Usuário" />
+				</f:facet>				
+			<h:panelGrid id="panelBusca" columns="1" rendered="#{cadastroBean.modo==0}">
+				<f:facet name="header" >
+					<h:outputText value="Cadastro de Usuário" />
+				</f:facet>
+				<h:panelGroup id="consultar2">
+					<h:panelGrid columns="2">
+						<h:outputLabel for="usuario" value="Usuário:" />
+						<h:inputText id="usuario" />
+						<h:panelGrid columns="1">
+							<h:commandButton value="Localizar" action="#{cadastroBean.getlocalizar()}">
+							</h:commandButton>
+							<h:commandButton  action="#{cadastroBean.getCadastrar()}"	value="Cadastrar" immediate="true">								
+							</h:commandButton>
+							<h:message for="usuario" style="color:red" />
+						</h:panelGrid>
+					</h:panelGrid>
+				</h:panelGroup>
+			</h:panelGrid>
+			</h:panelGrid>
+		</form>
+		
+	</ui:define>
+</ui:composition>
+
+</html>

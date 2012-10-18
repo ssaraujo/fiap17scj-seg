@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head>
+
+<script type="text/javascript">
+
+function teste2(){		
+	try{
+		document.getElementById('applet').setChavePrivada("#{recebeArquivoBean.chavePrivada}");
+	}catch (e) {
+		 alert(e);
+	}
+	// alert("#{recebeArquivoBean.chavePrivada}");
+    //teste("#{recebeArquivoBean.chavePrivada}");
+    //document.getElementById('buttonId').click();
+ }
+
+ 
+function salvar(){	
+	try{
+	 document.getElementById('form1:teste1').value=document.getElementById('applet').getConteudo();
+	 alert(document.getElementById('applet').getConteudo());
+	document.getElementById('form1:buttonId').click();
+	}catch (e) {
+		 alert(e);
+	}  
+ }
+//teste2();
+</script>
+</h:head> 
+<body> 
+<h:form id="form1">
+<h:button id="teste"  onclick="javascript:teste2()"  value="FDSFS" >XXX</h:button>
+<h:inputHidden id="teste1" value="#{recebeArquivoBean.valor}" />
+<h:commandButton  id="buttonId" style="display: none"/>
+</h:form>
+<br />
+
+<applet code="br.com.fiap.seguranca.applet.AssinadorApplet.class" MAYSCRIPT="true" name="applet" id="applet" codebase="resources/"  archive="applet-0.0.1-SNAPSHOT.jar"  width="390" height="34"   >
+  <param name="MAYSCRIPT" value="mayscript"/>  
+ <param name="chavePrivada" value="1234" />   
+</applet>
+
+
+
+<script type="text/javascript">
+teste2();
+</script>
+</body> 
+</html>

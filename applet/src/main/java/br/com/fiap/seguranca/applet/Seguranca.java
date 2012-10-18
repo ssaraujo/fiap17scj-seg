@@ -1,4 +1,4 @@
-package br.com.fiap.applet;
+package br.com.fiap.seguranca.applet;
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;
@@ -15,7 +15,7 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 
 import javax.xml.bind.DatatypeConverter;
-
+@SuppressWarnings("restriction")
 public class Seguranca {
 
 	KeyPair keyPair = null;
@@ -31,7 +31,8 @@ public class Seguranca {
 		}
 	}
 
-	@
+	
+	
 	public String getChavePublica() {
 		PublicKey publicKey = keyPair.getPublic();
 		return new String(DatatypeConverter.printBase64Binary(publicKey

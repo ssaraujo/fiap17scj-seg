@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<ui:composition template="modelo.xhtml">
+	<ui:define name="pageTitle">Cadastro</ui:define>
+	<ui:define name="pageHeader">Segurança Java</ui:define>
+	<ui:define name="body">		
+			<form jsfc="h:form" id="Form">			
+				<f:facet name="header">
+					<h:outputText value="Cadastro de Funcionário" />
+				</f:facet>
+				<h:panelGroup id="cadastrar">
+					<h:panelGrid columns="2" style="text-align: left">
+						<h:outputLabel for="txChapa" value="Chapa:" />
+						<h:inputText id="txChapa" value="#{cadastroBean.funcionario.chapa}" />
+						<h:outputLabel for="txNome" value="Nome:" />
+						<h:inputText id="txNome" value="#{cadastroBean.funcionario.nome}" />
+						<h:outputLabel for="txSobrenome" value="Sobrenome" />
+						<h:inputText id="txSobrenome" value="#{cadastroBean.funcionario.sobrenome}"/>
+						<h:outputLabel for="smCargo" value="Cargo" />
+						<h:selectOneMenu id="smCargo" value="#{cadastroBean.funcionario.cargo}" >								
+							 <f:selectItem itemLabel="Administrador" itemValue="Administrador" />
+							  <f:selectItem itemLabel="Gerente" itemValue="Gerente" />	
+							  <f:selectItem itemLabel="Funcionario" itemValue="Funcionario" />							  									
+						</h:selectOneMenu>
+						<h:outputLabel for="ckDesligado" value="Desligado" />
+						<h:selectBooleanCheckbox id="ckDesligado" value="#{cadastroBean.funcionario.desligamento}">
+						</h:selectBooleanCheckbox>
+						<h:outputLabel for="txDataNascimento" value="Data de Nascimento" />
+						<h:inputText id="txDataNascimento" value="#{cadastroBean.funcionario.dataNascimento}" size="20"	>
+							<f:convertDateTime locale="pt_BR" pattern="dd/MM/yyyy" />
+						</h:inputText>
+						<h:outputLabel for="txDataAdmissao" value="Data de Admissão" />
+						<h:inputText id="txDataAdmissao" value="#{cadastroBean.funcionario.dataAdmissao}" size="20"
+							>
+							<f:convertDateTime  locale="pt_BR" dateStyle="long" pattern="dd/MM/yyyy" />
+						</h:inputText>
+						<h:outputLabel for="txDataPromocao" value="Data Promoção" />
+						<h:inputText id="txDataPromocao" value="#{cadastroBean.funcionario.dataPromocao}" size="20"
+							 label="" readonly="true">
+							<f:convertDateTime locale="pt_BR" pattern="dd/MM/yyyy" />
+						</h:inputText>
+						<h:outputLabel for="txUsuario" value="Usuário" />
+						<h:inputText id="txUsuario" value="#{cadastroBean.funcionario.usuario}" />
+						<h:commandButton value="Salvar" action="#{cadastroBean.salvar()}">						
+						</h:commandButton>
+					</h:panelGrid>					
+				</h:panelGroup>	
+			</form>			
+	</ui:define>
+</ui:composition>
+
+</html>

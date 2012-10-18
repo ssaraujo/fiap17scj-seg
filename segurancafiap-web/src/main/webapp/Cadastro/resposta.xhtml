@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="modelo.xhtml">
+	<ui:define name="pageTitle">Title</ui:define>
+	<ui:define name="pageHeader">Segurança Java</ui:define>
+	<ui:define name="body">
+	    <h:panelGrid columns="1">
+	    	<f:facet name="header">Cadastro realizado com sucesso</f:facet>
+	    	<h:outputLabel for="usuario" value="Usuário:" />
+			<h:outputText id="usuario" value=""/>
+			<h:outputLabel for="senha" value="senha inicial:" />
+			<h:outputText id="senha" value="" />
+			<h:outputLabel for="chave" value="chavePublica:" />
+			<h:outputText id="senha" />
+	    </h:panelGrid>
+	</ui:define>	
+</ui:composition>
+</html>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SegurancaSOA-web</name>
+	<name>segurancaapp-web</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -47,7 +47,6 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>fr.obeo.dsl.viewpoint.nature.modelingproject</nature>
 		<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
 		<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
@@ -56,6 +55,7 @@
 		<nature>org.jboss.tools.jst.web.kb.kbnature</nature>
 		<nature>org.jboss.tools.cdi.core.cdinature</nature>
 		<nature>org.jboss.tools.ws.jaxrs.nature</nature>
+		<nature>org.jboss.tools.jsf.jsfnature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
 </projectDescription>

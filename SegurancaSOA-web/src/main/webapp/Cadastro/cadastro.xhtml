@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<ui:composition template="modelo.xhtml">
+	<ui:define name="pageTitle">Title</ui:define>
+	<ui:define name="pageHeader">Segurança Java</ui:define>
+	<ui:define name="body">
+		<form jsfc="h:form" id="Form">
+			<h:panelGrid id="panelBusca" columns="1" rendered="#{cadastroBean.cadastrar}">
+				<f:facet name="header" >
+					<h:outputText value="Cadastro de Usuário" />
+				</f:facet>
+				<h:panelGroup id="consultar">
+					<h:panelGrid columns="2">
+						<h:outputLabel for="usuario" value="Usuário:" />
+						<h:inputText id="usuario" />
+						<h:panelGrid columns="1">
+							<h:commandButton value="Localizar">
+							</h:commandButton>
+							<h:commandButton action="#{cadastroBean.realizarCadastro}"
+								value="Cadastrar" immediate="true">								
+							</h:commandButton>
+							<h:message for="usuario" style="color:red" />
+						</h:panelGrid>
+					</h:panelGrid>
+				</h:panelGroup>
+			</h:panelGrid>
+			<h:panelGrid id="panelCadastra" columns="1" rendered="#{!cadastroBean.cadastrar}">
+				<f:facet name="header">
+					<h:outputText value="Cadastro de Funcionário" />
+				</f:facet>
+				<h:panelGroup id="cadastrar">
+					<h:panelGrid columns="2">
+						<h:outputLabel for="txNome" value="Nome:" />
+						<h:inputText id="txNome" value="#{cadastroBean.funcionario.nome}" />
+						<h:outputLabel for="txSobrenome" value="Sobrenome" />
+						<h:inputText id="txSobrenome" value="#{cadastroBean.funcionario.sobreNome}"/>
+						<h:outputLabel for="smCargo" value="Cargo" />
+						<h:selectOneMenu id="smCargo" value="#{null}">
+							<f:selectItems value="#{null}" />
+						</h:selectOneMenu>
+						<h:outputLabel for="ckDesligado" value="Desligado" />
+						<h:selectBooleanCheckbox id="ckDesligado" value="#{cadastroBean.funcionario.desligado}">
+						</h:selectBooleanCheckbox>
+						<h:outputLabel for="txDataNascimento" value="Data de Nascimento" />
+						<h:inputText id="txDataNascimento" value="#{cadastroBean.funcionario.dataNascimento}" size="20"	>
+							<f:convertDateTime pattern="dd-MM-yyyy" />
+						</h:inputText>
+						<h:outputLabel for="txDataAdmissao" value="Data de Admissão" />
+						<h:inputText id="txDataAdmissao" value="#{cadastroBean.funcionario.dataAdmissao}" size="20"
+							>
+							<f:convertDateTime  locale="pt,BR" dateStyle="long" pattern="dd/MM/yyyy" />
+						</h:inputText>
+						<h:outputLabel for="txDataPromocao" value="Data Promoção" />
+						<h:inputText id="txDataPromocao" value="#{cadastroBean.funcionario.dataUltimaPromocao}" size="20"
+							 label="" readonly="true">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:inputText>
+						<h:outputLabel for="txUsuario" value="Usuário" />
+						<h:inputText id="txUsuario" />
+						<h:commandButton value="Salvar" immediate="true" action="#{cadastroBean.salvar}">
+						</h:commandButton>
+					</h:panelGrid>
+					
+					<h:panelGrid columns="1">
+						<h:commandButton value="Salvar" immediate="true" action="#{cadastroBean.salvar()}">
+						</h:commandButton>
+					</h:panelGrid>
+				</h:panelGroup>
+			</h:panelGrid>
+		</form>
+	</ui:define>
+</ui:composition>
+
+</html>

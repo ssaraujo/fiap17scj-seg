@@ -1,10 +1,11 @@
-package br.com.fiap.applet;
+package main.java.br.com.fiap.segurancaSoa.util;
+
+
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
-import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
@@ -31,7 +32,6 @@ public class Seguranca {
 		}
 	}
 
-	@
 	public String getChavePublica() {
 		PublicKey publicKey = keyPair.getPublic();
 		return new String(DatatypeConverter.printBase64Binary(publicKey
@@ -45,7 +45,7 @@ public class Seguranca {
 				.getEncoded()));
 	}
 
-	public String criptografar(String chave, String hash) {
+	public String assinarHash(String chave, String hash) {
 		KeyFactory keyFactory;
 		try {
 			keyFactory = KeyFactory.getInstance(algorithm);
@@ -109,19 +109,6 @@ public class Seguranca {
 			e.printStackTrace();
 		}
 		return false;
-	}
-	
-	public String gerarMD5(String conteudo){		
-		try {
-			MessageDigest md;
-			md = MessageDigest.getInstance("MD5");
-			byte[] criptografada = md.digest(conteudo.getBytes());
-		    return new String(criptografada);
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    return null;
 	}
 
 }

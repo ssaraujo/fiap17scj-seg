@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13504419403610" configfile="/segurancafiap-web/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="Cadastro/cadastro.xhtml" x="264" y="204" id="pf13504423803121" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf13505246232530" path="/Cadastro/cadastro.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Cadastro/resposta.xhtml" x="330" y="332" id="pf13505246232531" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf13505246232530" path="/Cadastro/resposta.xhtml"/>
+  <links id="pf13505246232530" target="pf13505246232531" source="pf13504423803121" outcome="sucesso"/>
+</pageflow:Pageflow>
