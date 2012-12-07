@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+         <com.google.android.maps.MapView
+             android:id="@+id/mapId"
+             android:layout_width="321dp"
+             android:layout_height="306dp"
+             android:apiKey="0XClpOiV_I9YzADXdMBX3bsk4XtD2bgkkvzK4LA"
+             android:clickable="true"
+             android:enabled="true" />
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="bottom"
+             android:orientation="vertical" >
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="bottom"
+                  android:orientation="horizontal" >
+                  
+                  <TextView
+                      android:id="@+id/textView1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Tempo: " />
+
+             <TextView
+                 android:id="@+id/txMapaTempo"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="_"
+                 android:textAppearance="?android:attr/textAppearanceLarge" />
+                 
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="bottom"
+                  android:orientation="horizontal" >
+
+             <TextView
+                 android:id="@+id/textView3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Distância: " />
+
+             <TextView
+                 android:id="@+id/txMapaDistancia"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="_"
+                 android:textAppearance="?android:attr/textAppearanceLarge" />
+             
+               </LinearLayout>
+
+             <Button
+                 android:id="@+id/btMapaVoltar"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="fill_vertical"
+                 android:text="Voltar" />
+         </LinearLayout>
+
+       
+
+    </FrameLayout>
+</LinearLayout>

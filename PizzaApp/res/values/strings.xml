@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <string name="hello">Hello World, HelloGoogleMaps!</string>
+ <string name="app_name">Hello,GoogleMaps</string>
+ <string name="mapskey">0XClpOiV_I9YzADXdMBX3bsk4XtD2bgkkvzK4LA</string>
+ <string name="bebida_prompt">Escolha uma bebida</string>
+ <string-array name="bebidas_array">
+        <item>Coca-Cola</item>
+        <item>Fanta</item>
+        <item>Suco Laranja</item>
+        <item>Suco Limão</item>
+        <item>Suco Maça</item>
+        <item>Brahma</item>
+        <item>Antartica</item>
+        <item>Bavaria</item>
+    </string-array>
+</resources>
