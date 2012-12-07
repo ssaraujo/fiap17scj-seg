@@ -24,6 +24,7 @@ public class HelloGoogleMaps2 extends MapActivity {
 				drawable, this);
 		GeoPoint point = new GeoPoint(30443769, -91158458);
 		OverlayItem overlayitem = new OverlayItem(point,
+				
 				"Laissez les bon temps rouler!", "I'm in Louisiana!");
 
 		GeoPoint point2 = new GeoPoint(17385812, 78480667);
