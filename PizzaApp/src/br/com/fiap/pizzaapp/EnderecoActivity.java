@@ -30,7 +30,7 @@ import android.widget.TextView;
  *
  */
 public class EnderecoActivity extends Activity implements OnClickListener{
-	//teste silvio3
+	//teste silvio4
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
