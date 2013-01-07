@@ -30,7 +30,8 @@ import android.widget.TextView;
  *
  */
 public class EnderecoActivity extends Activity implements OnClickListener{
-	//teste silvio6
+	//teste silvio666
+	
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
@@ -42,6 +43,7 @@ public class EnderecoActivity extends Activity implements OnClickListener{
 		StrictMode.setThreadPolicy(policy); 
 		Button localizar = (Button)findViewById(R.id.btEnderecoLocalizar);
 		localizar.setOnClickListener(this);
+		
 
 	}
 
