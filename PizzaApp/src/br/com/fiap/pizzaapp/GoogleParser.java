@@ -19,7 +19,7 @@ public class GoogleParser {
 	protected URL feedUrl;
 
 	public GoogleParser(String feedUrl) {
-		// silvio4
+		// silvio5
 		try {
 			this.feedUrl = new URL(feedUrl);
 		} catch (MalformedURLException e) {
